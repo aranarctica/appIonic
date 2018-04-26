@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="lista">
+    <ion-title>
+Notas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <!-- La directiva ngFor es la que se encarga de presentar una lista de elementos en pantalla de una forma sencilla. 
+          l-->
+    <button color="goiko" ion-item *ngFor="let nota of notas" (click)="goToDetail(nota.id)">
+      
+      {{ nota.titulo}}
+    </button> 
+  </ion-list>
+  <div padding>
+
+  <button ion-button block (click)="crearNota()" color="nirea">Crear</button>
+    </div>
+</ion-content>

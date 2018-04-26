@@ -1,0 +1,40 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="lista">
+    <ion-title>Detalle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-list>
+
+    <ion-item color="goiko">
+      <ion-label floating>Titulo</ion-label>
+      <!-- Esto es un comentario -->
+      <ion-input  type="text" [(ngModel)]="nota.titulo"></ion-input>
+    </ion-item>
+  
+    <ion-item color="goiko">
+      <ion-label floating>Descripcion</ion-label>
+      <!-- Esto es un comentario -->
+      <ion-input  [(ngModel)]="nota.descripcion"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <div padding>
+    <!-- Al hacer click  iremos a la funcion addNota -->
+  <button ion-button block (click)="addNota()" color="nirea">Guardar</button>
+  <!-- Al hacer click iremos a la funcion delNote -->
+  <button *ngIf="id !=0" ion-button block (click)="delNota()" color="danger">Eliminar</button>
+
+</div>
+
+</ion-content>
